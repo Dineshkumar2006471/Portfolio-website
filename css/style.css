@@ -59,6 +59,13 @@ nav ul li a:hover {
   
 }
 
+.image-top{
+  border-radius: 50%;
+  height:200px;
+  width:200px;
+  
+}
+
 .purple {
   color: rgb(170, 107, 228);
 }
@@ -85,5 +92,27 @@ nav ul li a:hover {
 .resume-btn:hover {
   background-color: #483c6f;
 }
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top:40px
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(159, 121, 243, 0.6);
+}
+
 
 
