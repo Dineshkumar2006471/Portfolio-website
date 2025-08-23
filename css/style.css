@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(0, 0, 33);
+  color: white;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(18, 18, 62);
+  padding: 0 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: rgb(153, 153, 226);
+  font-size: 1.2rem;
+}
+
+.left {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.firstsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+  padding: 2rem;
+}
+
+.Introsection {
+  font-size: 2rem;
+  line-height: 5rem;
+  
+}
+
+.purple {
+  color: rgb(170, 107, 228);
+}
+
+#element {
+  color: #9f79f3;
+}
+
+.resume-button-container {
+  margin-top: 30px;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3e198c;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #483c6f;
+}
+
+

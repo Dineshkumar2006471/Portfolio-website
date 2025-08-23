@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Dinesh's Portfolio</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/background.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+
+  <!-- Custom Page Styling -->
+  <style>
+    .about-section {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 0 20px;
+    }
+
+    .about-block {
+      margin-bottom: 50px;
+    }
+
+    .about-block h2 {
+      font-size: 2rem;
+      color: #9f79f3;
+      margin-bottom: 15px;
+      border-left: 5px solid #9f79f3;
+      padding-left: 10px;
+    }
+
+    .about-block p, .about-block ul {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+    }
+
+    .about-block ul {
+      list-style-type: "🔹 ";
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        margin: 70px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="left">Dinesh's Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <main class="about-section">
+
+   
+    <!-- About Me -->
+    <div class="about-block" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm <strong>Dinesh</strong>, a creative and enthusiastic web developer with a deep love for crafting beautiful, performant websites and applications. I enjoy building modern UIs, automating cloud deployments, and learning new technologies every day.
+      </p>
+    </div>
+
+    <!-- Education -->
+    <div class="about-block" data-aos="fade-up" data-aos-delay="100">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Computer Science</strong> – Sanskriti University</li>
+        <li><strong>CGPA:</strong> 9</li>
+        <li><strong>Core Subjects:</strong> Data Structures, Web Technologies, Cloud Computing, DevOps</li>
+      </ul>
+    </div>
+
+    <!-- Interests -->
+    <div class="about-block" data-aos="fade-up" data-aos-delay="200">
+      <h2>Interests</h2>
+      <ul>
+        <li>💻 Full Stack Web Development</li>
+        <li>☁️ Cloud Computing (AWS, Oracle) </li>
+        <li>⚙️ DevOps and Infrastructure Automation</li>
+        <li>🎨 Data analysis and Data visualization</li>
+      </ul>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="about-block" data-aos="fade-up" data-aos-delay="300">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>🎮 Gaming</li>
+        <li>📚 Reading Tech Blogs & Books</li>
+        <li>🎵 Listening to Music</li>
+        <li>🌍 Exploring New Tools and Frameworks</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
