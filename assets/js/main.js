@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const typedTarget = document.querySelector("#element");
   if (typedTarget) {
     new Typed("#element", {
-      strings: ["Web Developer", "Cloud and Database Explorer", "DevOps Engineer"],
+      strings: ["Web Developer", "UI/UX Designer", "AI/ML Engineer"],
       typeSpeed: 50,
       backSpeed: 30,
       loop: true,

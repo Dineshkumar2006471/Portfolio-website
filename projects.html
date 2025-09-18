@@ -45,6 +45,16 @@
       font-size: 1rem;
     }
 
+    .card {
+      background-color: rgb(18, 18, 62);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      height:200px
+    }
+
     @media (max-width: 768px) {
       .projects-section {
         margin: 70px 10px;
@@ -64,6 +74,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+           <li><a href="skills.html">Skills</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -77,6 +88,7 @@
     <!-- Project 1 -->
     <div class="project-block" data-aos="fade-up">
       <h2>📁 TinDog Portfolio Website</h2>
+      <div><img class="card" src="./assets/images/ss1.png" /></div>
       <p>
         A demo tindog portfolio website built using HTML, CSS features include smooth scroll animations.
       </p>
@@ -87,6 +99,7 @@
     <!-- Project 2 -->
     <div class="project-block" data-aos="fade-up" data-aos-delay="100">
       <h2>Blog web Application</h2>
+      <div><img class="card" src="./assets/images/ss2.png" /></div>
       <p>
         Developed a blog application using node.js and expreess.js that runs on a local host this full stack web app supports essential CRUD operaations which follows model view controller architecture
       </p>
@@ -96,6 +109,7 @@
     <!-- Project 3 -->
     <div class="project-block" data-aos="fade-up" data-aos-delay="200">
       <h2>🌤️ Weather App API </h2>
+      <div><img class="card" src="./assets/images/ss3.png" /></div>
       <p>
         Developed backend weather applicatio using node.js and express.js which fetches real-time weather data from a third-party weather API
       </p>

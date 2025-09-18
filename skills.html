@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About - Dinesh's Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Main Container for Skills Section */
+        .skills-container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 20px;
+            color: #fff;
+            position: relative;
+            z-index: 2; /* Ensure content is on top of particles */
+        }
+        
+        /* Section Header */
+        .skills-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .skills-header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .skills-header p {
+            font-size: 1.1em;
+            color: #bbb;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        /* Skill Category Section */
+        .skill-category {
+            flex-grow: 1;
+            flex-basis: 350px; /* Base width for each column */
+            max-width: 400px; /* Prevents columns from getting too wide */
+        }
+
+        .skill-category h2 {
+            font-size: 1.5em;
+            color: #a386f2; /* Heading color */
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            
+        }
+
+        /* Skill Item */
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items:justify;
+            background-color: rgba(30, 29, 60, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skill Name */
+        .skill-name {
+            font-size: 1em;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        /* Skill Percentage Text */
+        .skill-percentage-text {
+            font-size: 0.9em;
+            color: #bbb;
+            z-index: 1;
+        }
+
+        /* Skill Bar */
+        .skill-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 8px;
+            transition: width 1s ease-in-out;
+            opacity: 0.5;
+        }
+
+        /* Skill Bar Colors */
+        .react .skill-bar, .next-js .skill-bar, .typescript .skill-bar { background-color: #3d7fff; }
+        .tailwind .skill-bar { background-color: #06b6d4; }
+        .node-js .skill-bar, .express .skill-bar { background-color: #4caf50; }
+        .python .skill-bar { background-color: #2196f3; }
+        .postgresql .skill-bar, .mongodb .skill-bar { background-color: #ff9800; }
+        .git .skill-bar, .docker .skill-bar, .aws .skill-bar { background-color: #9c27b0; }
+        .figma .skill-bar, .adobe-xd .skill-bar { background-color: #f44336; }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .skills-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .skill-category {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="left">Dinesh's Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" style="color:rgb(153, 153, 226);font-weight:bold;">About</a></li>
+             <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="skills-container" data-aos="fade-up">
+        <div class="skills-header">
+            <h1 class="skills-title">My Skills</h1>
+            <p class="skills-subtitle">Technologies and tools I use to bring ideas to life</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category frontend">
+                <h2>Frontend</h2>
+                <div class="skill-item react">
+                    <div class="skill-bar" style="width: 85%;"></div>
+                    <span class="skill-name">React</span>
+                    <span class="skill-percentage-text">85%</span>
+                </div>
+                <div class="skill-item next-js">
+                    <div class="skill-bar" style="width: 90%;"></div>
+                    <span class="skill-name">Next.js</span>
+                    <span class="skill-percentage-text">90%</span>
+                </div>
+                <div class="skill-item typescript">
+                    <div class="skill-bar" style="width: 80%;"></div>
+                    <span class="skill-name">Typescript</span>
+                    <span class="skill-percentage-text">80%</span>
+                </div>
+                <div class="skill-item tailwind">
+                    <div class="skill-bar" style="width: 95%;"></div>
+                    <span class="skill-name">Tailwind CSS</span>
+                    <span class="skill-percentage-text">95%</span>
+                </div>
+            </div>
+
+            <div class="skill-category backend">
+                <h2>Backend</h2>
+                <div class="skill-item node-js">
+                    <div class="skill-bar" style="width: 80%;"></div>
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-percentage-text">80%</span>
+                </div>
+                <div class="skill-item python">
+                    <div class="skill-bar" style="width: 85%;"></div>
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percentage-text">85%</span>
+                </div>
+                <div class="skill-item express">
+                    <div class="skill-bar" style="width: 80%;"></div>
+                    <span class="skill-name">Express.js</span>
+                    <span class="skill-percentage-text">80%</span>
+                </div>
+            </div>
+
+            <div class="skill-category database">
+                <h2>Database</h2>
+                <div class="skill-item postgresql">
+                    <div class="skill-bar" style="width: 75%;"></div>
+                    <span class="skill-name">PostgreSQL</span>
+                    <span class="skill-percentage-text">75%</span>
+                </div>
+                <div class="skill-item mongodb">
+                    <div class="skill-bar" style="width: 70%;"></div>
+                    <span class="skill-name">MongoDB</span>
+                    <span class="skill-percentage-text">70%</span>
+                </div>
+            </div>
+            
+            <div class="skill-category tools">
+                <h2>Tools</h2>
+                <div class="skill-item git">
+                    <div class="skill-bar" style="width: 90%;"></div>
+                    <span class="skill-name">Git</span>
+                    <span class="skill-percentage-text">90%</span>
+                </div>
+                <div class="skill-item docker">
+                    <div class="skill-bar" style="width: 75%;"></div>
+                    <span class="skill-name">Docker</span>
+                    <span class="skill-percentage-text">75%</span>
+                </div>
+                <div class="skill-item aws">
+                    <div class="skill-bar" style="width: 75%;"></div>
+                    <span class="skill-name">AWS</span>
+                    <span class="skill-percentage-text">75%</span>
+                </div>
+            </div>
+            
+            <div class="skill-category design">
+                <h2>Design</h2>
+                <div class="skill-item figma">
+                    <div class="skill-bar" style="width: 85%;"></div>
+                    <span class="skill-name">Figma</span>
+                    <span class="skill-percentage-text">85%</span>
+                </div>
+                <div class="skill-item adobe-xd">
+                    <div class="skill-bar" style="width: 85%;"></div>
+                    <span class="skill-name">Adobe XD</span>
+                    <span class="skill-percentage-text">85%</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#9f79f3" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#9f79f3",
+            opacity: 0.4,
+            width: 1
+          },
+          move: { enable: true, speed: 2 }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: false },
+            onclick: { enable: false },
+            resize: true
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
