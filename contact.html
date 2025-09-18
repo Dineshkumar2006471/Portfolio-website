@@ -146,10 +146,11 @@
         }
 
         .form-input {
+            width: 100%; /* Make input and textarea fill the container */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
             background-color: rgba(30, 29, 60, 0.7);
             border: 1px solid rgba(159, 121, 243, 0.3);
             border-radius: 8px;
-            margin: 20px;
             padding: 15px;
             font-size: 1em;
             color: #fff;
@@ -171,6 +172,7 @@
         }
 
         .send-button {
+            width: 100%; /* Make the button fill the container, aligning with inputs */
             background: linear-gradient(90deg, #6a1b9a, #9f79f3, #a386f2);
             border: none;
             color: #fff;
@@ -181,12 +183,28 @@
             cursor: pointer;
             transition: transform 0.3s ease;
             text-transform: uppercase;
-            width: 100%;
         }
 
         .send-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(159, 121, 243, 0.3);
+        }
+
+        .status-message {
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: none; /* Initially hidden */
+        }
+        .status-message.success {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .status-message.error {
+            background-color: #dc3545;
+            color: #fff;
         }
 
         /* Responsive adjustments */
@@ -207,7 +225,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                     <li><a href="skills.html">Skills</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -257,7 +274,7 @@
             </div>
 
             <div class="contact-form-section">
-                <form name="contact" method="POST" data-netlify="true">
+                <form id="contactForm" name="contact" method="POST" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="text" name="name" class="form-input" placeholder="Your Name" required />
                     <input type="email" name="email" class="form-input" placeholder="Your Email" required />
@@ -266,6 +283,7 @@
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </form>
+                <div id="statusMessage" class="status-message"></div>
             </div>
         </div>
     </main>
@@ -273,6 +291,33 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
-    <script src="assets/js/main.js"></script>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                statusMessage.textContent = 'Message sent successfully!';
+                statusMessage.className = 'status-message success';
+                statusMessage.style.display = 'block';
+                form.reset(); // Clear form fields
+            })
+            .catch((error) => {
+                statusMessage.textContent = 'Oops! Something went wrong.';
+                statusMessage.className = 'status-message error';
+                statusMessage.style.display = 'block';
+                console.error('Form submission error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
