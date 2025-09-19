@@ -114,5 +114,23 @@ nav ul li a:hover {
   box-shadow: 0 6px 16px rgba(159, 121, 243, 0.6);
 }
 
+.social-links {
+  margin: 15px 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 40px;
+  color: #464381; /* your purple highlight color */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #4a3fd8;
+  transform: scale(1.2);
+}
+
 
 
